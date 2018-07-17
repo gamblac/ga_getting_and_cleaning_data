@@ -1,2 +1,4 @@
-# ga_getting_and_cleaning_data
-Project for Coursera getting and cleaning data course
+# Getting and cleaning data
+My Project for Coursera "Getting and Cleaning data" course
+
+
