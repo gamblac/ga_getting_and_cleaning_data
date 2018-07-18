@@ -30,16 +30,3 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-## Data Cleaning process description (run_analysis.R script high level description)
-1. check for "accelero.zip", if does not exist than download the source file with name "accelero.zip"
-2. if folder "UCI HAR Dataset" does not exist than unzip "accelero.zip". As a result the "UCI HAR Dataset" will be created with experiment original data files
-3. load basic data, activities and features into a data.table
-4. select the necessary features only (as per the project task only mean and standard deviation variables need to be extracted)
-5. import the train and test files, import is filtered for only the necessary features (based on step 4)
-6. clean the feature variable names (e.g. replace Acc with Accelerator, Gyro with Gyroscope etc.)
-7. bind the subject and activity columns to the train and test data.tables
-8. merge the train and test data rows (rbind)
-9. set proper column names on the full data set
-10. melt full data set on activities and subjects, features molten to 'Features' column
-11. dcast the molten data to Subject and Activity with 'mean' function on 'Features'
-12. write final data set
