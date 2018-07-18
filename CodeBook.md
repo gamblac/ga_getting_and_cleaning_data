@@ -30,7 +30,7 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-## Data Cleaning process description
+## Data Cleaning process description (run_analysis.R script high level description)
 1. check for "accelero.zip", if does not exist than download the source file with name "accelero.zip"
 2. if folder "UCI HAR Dataset" does not exist than unzip "accelero.zip". As a result the "UCI HAR Dataset" will be created with experiment original data files
 3. load basic data, activities and features into a data.table

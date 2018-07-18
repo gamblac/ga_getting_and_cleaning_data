@@ -36,3 +36,5 @@ create one R script called run_analysis.R that does the following.
 - README.md
 - CodeBook.md
 - act_rec_tidy_data.txt (project's result file)
+- features.csv
+- run_analysis.R
