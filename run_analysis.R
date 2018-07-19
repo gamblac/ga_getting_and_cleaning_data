@@ -1,4 +1,5 @@
 library(reshape2)
+library(data.table)
 
 # download the file in case it is not done yet
 # data set description http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
@@ -53,4 +54,4 @@ full_set[[2]] <- factor(full_set[[2]], labels = activities[[2]])
 full_molten <- melt(full_set, id = c("Subject","Activity"), variable.name = "Features")
 act_rec_tidy_data <- dcast(full_molten, Subject + Activity ~ Features, mean) # act = activity, rec = recognition
 
-write.table(act_rec_tidy_data,"act_rec_tidy_data.txt", quote = FALSE)
+write.table(act_rec_tidy_data,"act_rec_tidy_data.txt", quote = FALSE, row.name = FALSE)
